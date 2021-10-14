@@ -11,10 +11,10 @@ namespace TechnicalHomework4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
+            //if (!IsPostBack)
+            //{
                 // not sure if it works this way, you pretty much just want to know if it exists
-                if (Session["UserType"] != null)
+                if (Session["usertype"] != null)
                 {
                     WelcomeLabel.ForeColor = System.Drawing.Color.Black;
                     switch (Session["UserType"].ToString())
@@ -37,7 +37,7 @@ namespace TechnicalHomework4
                     WelcomeLabel.ForeColor = System.Drawing.Color.Red;
                     WelcomeLabel.Text = "Not Signed In!";
                 }
-            }
+            //}
         }
 
         // This is my shit, even though this is inefficient because of server post-back
