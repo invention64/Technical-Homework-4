@@ -10,6 +10,6 @@
         <asp:ListItem Value="owner">Pet Owner</asp:ListItem>
         <asp:ListItem Value="internal">Dispensing Department</asp:ListItem>
     </asp:DropDownList>
-    <br />
-    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+<br />
+<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
 </asp:Content>

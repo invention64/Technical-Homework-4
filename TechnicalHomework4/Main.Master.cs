@@ -11,7 +11,31 @@ namespace TechnicalHomework4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                // not sure if it works this way, you pretty much just want to know if it exists
+                if (Session["UserType"] != null)
+                {
+                    switch (Session["UserType"].ToString())
+                    {
+                        // add response redirects
+                        case "vet":
+                            WelcomeLabel.Text = "Welcome Vet!";
+                            break;
+                        case "internal":
+                            WelcomeLabel.Text = "Hello Employee";
+                            break;
 
+                        case "owner":
+                            WelcomeLabel.Text = "Welcome Pet Owner";
+                            break;
+                        default:
+                            WelcomeLabel.ForeColor = System.Drawing.Color.Red;
+                            WelcomeLabel.Text = "Not Signed In!";
+                            break;
+                    }
+                }
+            }
         }
 
         // This is my shit, even though this is inefficient because of server post-back
@@ -20,10 +44,22 @@ namespace TechnicalHomework4
             // not sure if it works this way, you pretty much just want to know if it exists
             if (Session["UserType"] != null)
             {
-                switch (Session["UserType"])
+                switch (Session["UserType"].ToString())
                 {
                     // add response redirects
+                    case "vet":
 
+                        break;
+                    case "internal":
+
+                        break;
+
+                    case "owner":
+
+                        break;
+                    default:
+
+                        break;
                 }
             }
         }
