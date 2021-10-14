@@ -16,6 +16,7 @@ namespace TechnicalHomework4
                 // not sure if it works this way, you pretty much just want to know if it exists
                 if (Session["UserType"] != null)
                 {
+                    WelcomeLabel.ForeColor = System.Drawing.Color.Black;
                     switch (Session["UserType"].ToString())
                     {
                         // add response redirects
@@ -29,11 +30,12 @@ namespace TechnicalHomework4
                         case "owner":
                             WelcomeLabel.Text = "Welcome Pet Owner";
                             break;
-                        default:
-                            WelcomeLabel.ForeColor = System.Drawing.Color.Red;
-                            WelcomeLabel.Text = "Not Signed In!";
-                            break;
+                            
                     }
+                } else
+                {
+                    WelcomeLabel.ForeColor = System.Drawing.Color.Red;
+                    WelcomeLabel.Text = "Not Signed In!";
                 }
             }
         }
@@ -48,17 +50,17 @@ namespace TechnicalHomework4
                 {
                     // add response redirects
                     case "vet":
-
+                        Response.Redirect("VetOrder.aspx");
                         break;
                     case "internal":
-
+                        Response.Redirect("CompanyOrder.aspx");
                         break;
-
                     case "owner":
-
+                        Response.Redirect("OwnerOrder.aspx");
                         break;
                     default:
-
+                        WelcomeLabel.ForeColor = System.Drawing.Color.Red;
+                        WelcomeLabel.Text = "Not Signed In!";
                         break;
                 }
             }

@@ -30,8 +30,8 @@
                     <img src="assets/pill.png" width="30" height="30" alt="" />
                 <asp:Label ID="WelcomeLabel" runat="server" Text=""></asp:Label>
                 </a>
-                <asp:LinkButton ID="OrderBtn" runat="server" class="navbar-text ml-auto" href="#/orders" OnClick="OrderBtn_Click"><h4>Orders</h4></asp:LinkButton>
-                <a class="navbar-text ml-auto" href="#/signup"><h4>Sign-Up | Login</h4></a>
+                <asp:LinkButton ID="OrderBtn" runat="server" class="navbar-text ml-auto" OnClick="OrderBtn_Click"><h4>Orders</h4></asp:LinkButton>
+                <a class="navbar-text ml-auto" href="Login.aspx"><h4>Sign-Up | Login</h4></a>
             </nav>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
