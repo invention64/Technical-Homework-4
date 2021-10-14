@@ -23,6 +23,7 @@ namespace TechnicalHomework4
                 switch (Session["UserType"])
                 {
                     // add response redirects
+
                 }
             }
         }
