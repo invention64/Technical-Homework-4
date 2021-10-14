@@ -67,10 +67,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CompanyOrder.aspx" />
     <Content Include="OwnerOrder.aspx" />
+    <Content Include="VetOrder.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompanyOrder.aspx.cs">
+      <DependentUpon>CompanyOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompanyOrder.aspx.designer.cs">
+      <DependentUpon>CompanyOrder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -86,6 +95,13 @@
       <DependentUpon>OwnerOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VetOrder.aspx.cs">
+      <DependentUpon>VetOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VetOrder.aspx.designer.cs">
+      <DependentUpon>VetOrder.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Main.Master" />

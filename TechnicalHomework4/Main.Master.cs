@@ -13,5 +13,18 @@ namespace TechnicalHomework4
         {
 
         }
+
+        // This is my shit, even though this is inefficient because of server post-back
+        protected void OrderBtn_Click(object sender, EventArgs e)
+        {
+            // not sure if it works this way, you pretty much just want to know if it exists
+            if (Session["UserType"] != null)
+            {
+                switch (Session["UserType"])
+                {
+                    // add response redirects
+                }
+            }
+        }
     }
 }
