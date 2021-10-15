@@ -3,8 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     &nbsp;&nbsp;&nbsp;
-    <asp:Panel ID="Panel1" runat="server">
-    </asp:Panel>
+    <asp:Panel ID="Panel1" runat="server" CssClass="container rounded bg-dark m-3 p-2 text-light">
     <asp:Label ID="Label1" runat="server" Text="Owner Name:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
@@ -23,4 +22,5 @@
     <br />
     <asp:Label ID="Label5" runat="server" Text="Date to Fill:"></asp:Label>
     <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+    </asp:Panel>
 </asp:Content>
